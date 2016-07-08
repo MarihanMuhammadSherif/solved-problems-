@@ -139,3 +139,42 @@ int main()
 
     return 0;
 }
+
+
+// program to sort strings alphabiticaly 
+int main()
+{     char a[5][20];
+
+     int i,j;
+     for(i=0 ; i<5 ;++i)
+     {          fgets(a[i],20,stdin);
+     }
+    char t[20];
+
+
+     //each element is compared to all others
+     //5 elements
+     // 4 passes
+     // 4 comparisons for each pass
+
+  /  for(i=0 ; i<4 ;++i )
+     {
+          for(j=0 ; j<4 ;++j)
+          {
+               if(strcmp(a[j] ,a[j+1]) >0)
+               {     strcpy(t,a[j]);
+                strcpy(a[j],a[j+1]);
+                 strcpy(a[j+1],a[j]);
+               }
+
+          }
+     }
+
+
+
+       for(i=0 ; i<5 ;++i)
+     {          printf("%s",a[i]);
+     }
+
+    return 0;
+}
