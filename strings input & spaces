@@ -1,1 +1,43 @@
 
+#include <stdio.h>
+/*
+scanf cannt recognize spaces 
+so we must use "%[^\n]s"
+fgets does recognise spaces
+
+*/ 
+int main()
+{
+     //reading  a string with spaces  using
+     int i;
+char A[30];
+////////////////////
+//1.scanf
+scanf("%s",A);
+for(i=0;A[i] !=0;++i)
+{
+
+          printf("%c %d \n",A[i],A[i]);
+}
+/////////////////////////
+//2. scanf with [^\n]
+scanf("%[^\n]s",A);
+for(i=0;A[i] !=0;++i)
+{
+
+          printf("%c %d \n",A[i],A[i]);
+}
+///////////////////////
+//3.fgets
+fgets(A,30,stdin);
+
+for(i=0;A[i] !=0;++i)
+{
+
+          printf("%c %d \n",A[i],A[i]);
+}
+
+
+
+    return 0;
+}
