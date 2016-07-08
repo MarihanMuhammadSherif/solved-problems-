@@ -59,3 +59,17 @@ int counter_words(char* a){`
       }
  }
 return words;}
+
+
+///function to encode a string 
+char* encoder(char* s)
+{
+     int i;
+     for(i=0;i<strlen(s);++i)
+     {
+          s[i]-=30;
+     }
+     return s;
+}
+
+
