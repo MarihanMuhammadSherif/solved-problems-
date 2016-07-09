@@ -178,3 +178,50 @@ int main()
 
     return 0;
 }
+
+
+///
+
+//progarm to separate the words in a string sentens 
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+
+char a[1000];
+fgets(a,1000,stdin);
+int i, j;
+int w=1,flag=1;
+char b[1000];
+char (*word)[20]=a;
+for(i=0 ,j=0 ; a[i] !='\0' ;++i ,++j  )
+{
+
+     //if(flag==0)
+       //   j=0;
+     word[w-1][j]=a[i];
+     printf("%c  ... %c \n" , word[w-1][j] ,a[i] );
+
+  if(a[i] == ' ')
+     { word[w-1][j]='\n';
+     ++w; // ' 'w=2
+     j=0;
+
+
+     }
+
+
+}
+for(i=0 ; i<w;++i)
+{
+  printf("%s \n",*(word+i));
+}
+printf("%d \n",w);
+
+
+
+
+    return 0;
+}
